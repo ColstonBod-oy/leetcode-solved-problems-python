@@ -1,6 +1,6 @@
 import sys
 
-# from module.ClassName import ClassName.solutionMethod
+# from package.module_name import ClassName.solutionMethod
 
 def main():
   # print(solutionMethod())
