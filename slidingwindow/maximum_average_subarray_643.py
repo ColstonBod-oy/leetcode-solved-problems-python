@@ -5,6 +5,6 @@ class Solution(object):
     for i in range(len(nums) - k):
       curSum = (curSum - nums[i] + nums[i + k])
       maxSum = max(maxSum, curSum)
-    return float(maxSum) / k
+    return maxSum / k
       
     
