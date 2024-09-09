@@ -1,9 +1,9 @@
 class Solution(object):
   def twoSum(self, nums, target):
-    myMap = {}
+    my_map = {}
     for i, num in enumerate(nums):
-      findVal = target - num
-      if (findVal in myMap):
-        return [myMap[findVal], i]
+      find_val = target - num
+      if (find_val in my_map):
+        return [my_map[find_val], i]
       else:
-        myMap[num] = i
+        my_map[num] = i
