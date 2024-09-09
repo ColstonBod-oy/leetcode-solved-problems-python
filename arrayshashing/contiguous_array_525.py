@@ -1,18 +1,18 @@
 class Solution(object):
   def findMaxLength(self, nums):
-    counter0, counter1, res = 0, 0, 0
-    myMap = {}
+    counter_0, counter_1, res = 0, 0, 0
+    my_map = {}
     for i, n in enumerate(nums):
       if n == 0:
-        counter0 += 1
+        counter_0 += 1
       else:
-        counter1 += 1
+        counter_1 += 1
 
-      if counter1 - counter0 not in myMap:
-        myMap[counter1 - counter0] = i
+      if counter_1 - counter_0 not in my_map:
+        my_map[counter_1 - counter_0] = i
 
-      if counter0 == counter1:
-        res = counter0 + counter1
+      if counter_0 == counter_1:
+        res = counter_0 + counter_1
       else:
-        res = max(res, i - myMap[counter1 - counter0])
+        res = max(res, i - my_map[counter_1 - counter_0])
     return res
