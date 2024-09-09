@@ -1,19 +1,19 @@
 class Solution(object):
   def isAnagram(self, s, t):
-    sMap, tMap = {}, {}
+    s_map, t_map = {}, {}
 
     if (len(s) != len(t)):
       return False
       
-    for sChar, tChar in zip(s, t):
-      if sChar in sMap:
-        sMap[sChar] += 1
+    for s_char, t_char in zip(s, t):
+      if s_char in s_map:
+        s_map[s_char] += 1
       else:
-        sMap[sChar] = 1
+        s_map[s_char] = 1
         
-      if tChar in tMap:
-        tMap[tChar] += 1
+      if t_char in t_map:
+        t_map[t_char] += 1
       else:
-        tMap[tChar] = 1
+        t_map[t_char] = 1
 
-    return sMap == tMap
+    return s_map == t_map
