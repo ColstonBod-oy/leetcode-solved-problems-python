@@ -4,10 +4,10 @@ class Solution(object):
     res = [intervals[0]]
 
     for start, end in intervals[1:]:
-      prevEnd = res[-1][1]
+      prev_end = res[-1][1]
 
-      if start <= prevEnd: 
-        end = max(end, prevEnd)
+      if start <= prev_end: 
+        end = max(end, prev_end)
         res[-1][1] = end
       else:
         res.append([start, end])
